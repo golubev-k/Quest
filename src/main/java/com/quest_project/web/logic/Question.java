@@ -21,10 +21,6 @@ public class Question {
         return textOfQuestion;
     }
 
-    public int getNumberOfQuestion() {
-        return numberOfQuestion;
-    }
-
     public String getFirstAnswer() {
         return firstAnswer;
     }

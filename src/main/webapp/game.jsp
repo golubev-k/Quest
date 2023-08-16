@@ -20,12 +20,12 @@
         </p>
         <p>
             <label>
-                <input name="answer" type="radio" value="1" checked><%=GameLogic.getFirstAnswer(numberOfQuestion)%></input>
+                <input name="answer" type="radio" value="1" checked><%=GameLogic.getFirstAnswer(numberOfQuestion)%>
             </label>
         </p>
         <p>
             <label>
-                <input name="answer" type="radio" value="2"><%=GameLogic.getSecondAnswer(numberOfQuestion)%></input>
+                <input name="answer" type="radio" value="2"><%=GameLogic.getSecondAnswer(numberOfQuestion)%>
             </label>
         </p>
         <p>
