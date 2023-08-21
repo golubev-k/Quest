@@ -12,21 +12,21 @@ public class QuestionsReader {
         List<Question> questions = new ArrayList<>();
         try {
             InputStream fileWithQuestions = QuestionsReader.class.getClassLoader().getResourceAsStream("questions.txt");
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileWithQuestions));
-            while (bufferedReader.ready()) {
-                String line = bufferedReader.readLine();
-                partsOfQuestion = line.split(";");
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileWithQuestions));
 
-                int numberOfQuestion = Integer.parseInt(partsOfQuestion[0]);
-                String question = partsOfQuestion[1];
-                String firstAnswer = partsOfQuestion[2];
-                String secondAnswer = partsOfQuestion[3];
-                String ifChosenFirstAnswer = partsOfQuestion[4];
-                String ifChosenSecondAnswer = partsOfQuestion[5];
+                while (bufferedReader.ready()) {
+                    String line = bufferedReader.readLine();
+                    partsOfQuestion = line.split(";");
 
-                questions.add(new Question(numberOfQuestion, question, firstAnswer, secondAnswer, ifChosenFirstAnswer, ifChosenSecondAnswer));
-            }
+                    int numberOfQuestion = Integer.parseInt(partsOfQuestion[0]);
+                    String question = partsOfQuestion[1];
+                    String firstAnswer = partsOfQuestion[2];
+                    String secondAnswer = partsOfQuestion[3];
+                    String ifChosenFirstAnswer = partsOfQuestion[4];
+                    String ifChosenSecondAnswer = partsOfQuestion[5];
 
+                    questions.add(new Question(numberOfQuestion, question, firstAnswer, secondAnswer, ifChosenFirstAnswer, ifChosenSecondAnswer));
+                }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

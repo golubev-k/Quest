@@ -1,4 +1,5 @@
 <%@ page import="com.quest_project.web.logic.GameLogic" %>
+<%@ page import="com.quest_project.web.logic.InitServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -34,9 +35,9 @@
     </form>
 <div class="statistic">
     <p>Statistic:</p>
-    <p>Ip адресс: <%=session.getAttribute("ipAdress")%></p>
-    <p>Имя: <%=session.getAttribute("name")%></p>
-    <p>Колличество сыгранных игр: <%=(int)session.getAttribute("numberOfGamesPlayed")%></p>
+    <p>Ip адресс: <%=session.getAttribute(InitServlet.IP_ADDRESS)%></p>
+    <p>Имя: <%=session.getAttribute(InitServlet.NAME)%></p>
+    <p>Количество сыгранных игр: <%=(int)session.getAttribute(InitServlet.NUMBER_OF_GAMES_PLAYED)%></p>
 </div>
 </body>
 </html>

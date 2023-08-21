@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.quest_project.web.logic.InitServlet" %>
+<%@ page import="com.quest_project.web.logic.GameServlet" %><%--
   Created by IntelliJ IDEA.
   User: kostyagolubev
   Date: 15.08.2023
@@ -11,8 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-<% int numberOfQuestion = (int) session.getAttribute("numberOfQuestion");%>
-<h2 style="color: red"><%= session.getAttribute("resultMessage")%></>
+<% int numberOfQuestion = (int) session.getAttribute(InitServlet.NUMBER_OF_QUESTION);%>
+<h2 style="color: red"><%= session.getAttribute(GameServlet.RESULT_MESSAGE_PARAMETER)%></>
 <br>
 <br>
 <form action="index.jsp">
